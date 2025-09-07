@@ -1,5 +1,6 @@
 from player import Player
 from board import Board
+import config
 
 class SnakeLadderGame:
     def __init__(self):
@@ -13,14 +14,14 @@ class SnakeLadderGame:
         self.board = Board()
 
         ## Player initialization
-        self.players.append(Player("Alice"))
+        self.players.extend([Player("Alice")])
 
     def play(self):
         for player in self.players:
             roll = self.board.user_input()
             new_position = self.board.update_player_position(player.current_position, roll)
             player.move(new_position)
-            if player.current_position == 100:
+            if player.current_position == config.board_size:
                 print(f"{player.name} has won the game!")
                 self.is_over = True
                 break

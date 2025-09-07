@@ -1,25 +1,16 @@
+import config
 class Board:
     
     def __init__(self):
-        self.ladder_positions_map = {
-            7:  33,
-            37: 85,
-            51: 72,
-            78: 98
-        }
-        self.snake_positions_map = {
-            36: 19,
-            65: 35,
-            87: 32,
-            91: 53
-        }
+        self.ladder_positions_map = config.ladder_positions_map
+        self.snake_positions_map = config.snake_positions_map
 
 
     def user_input(self):
         while True:
             try:
                 roll = int(input("Press Enter to roll the dice: "))
-                if roll in range(1, 7):
+                if roll in range(config.min_dice_value, config.max_dice_value + 1):
                     return roll
                 else:
                     print("Invalid input. Please press Enter to roll the dice.")
@@ -29,7 +20,7 @@ class Board:
 
     def update_player_position(self, current_position, roll):
         ## Check if the move is valid
-        if current_position + roll > 100:
+        if current_position + roll > config.board_size:
             print(f"player rolled {roll} but cannot move from {current_position} to {current_position + roll} (exceeds 100).")
             return current_position
 
