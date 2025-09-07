@@ -22,7 +22,7 @@ class SnakeLadderGame:
             player.move(new_position)
             if player.current_position == 100:
                 print(f"{player.name} has won the game!")
-                self.is_game_over = True
+                self.is_over = True
                 break
 
     def end(self):

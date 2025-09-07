@@ -18,7 +18,7 @@ class Board:
     def user_input(self):
         while True:
             try:
-                roll = int(input("Press Enter to roll the dice..."))
+                roll = int(input("Press Enter to roll the dice: "))
                 if roll in range(1, 7):
                     return roll
                 else:
