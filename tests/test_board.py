@@ -1,8 +1,6 @@
 from unittest import TestCase
 from unittest.mock import patch
-from game.board import Board
-import game.config as config
-
+from snake_ladder.board import Board
 
 
 class TestBoard(TestCase):

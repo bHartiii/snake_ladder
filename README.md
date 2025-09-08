@@ -10,7 +10,7 @@ A simple python console snake & ladder game.
 - Clone repo
 - Go to parent dir snake_ladder
 - Run command
-```python -m game.game```
+```python -m snake_ladder.game```
 - Enter the number between 1-6 to roll the dice.
 
 ## To run testcase
