@@ -14,7 +14,7 @@ class SnakeLadderGame:
         self.board = Board()
 
         ## Player initialization
-        self.players.extend([Player("Alice")])
+        self.players.extend([Player(input("Enter player name: "))])
 
     def play(self):
         for player in self.players:
