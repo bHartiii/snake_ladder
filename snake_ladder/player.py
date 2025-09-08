@@ -1,4 +1,4 @@
-from game.config import starting_position
+from snake_ladder.config import starting_position
 class Player:
     def __init__(self, name):
         self.name = name

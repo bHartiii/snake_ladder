@@ -1,6 +1,6 @@
 from unittest import TestCase
 from unittest.mock import patch
-from game.game import SnakeLadderGame as Game
+from snake_ladder.game import SnakeLadderGame as Game
 
 
 class TestGame(TestCase):
@@ -9,7 +9,7 @@ class TestGame(TestCase):
         self.game = Game()
         self.game.setup()
 
-    @patch('game.board.Board.user_input', side_effect=[5, 2, 4, 5, 5, 5])
+    @patch('snake_ladder.board.Board.user_input', side_effect=[5, 2, 4, 5, 5, 5])
     def test_play_game(self, mock_user_input):
         # Simulate a game where players take turns rolling the dice
         while not self.game.is_over:

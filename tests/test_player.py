@@ -1,5 +1,5 @@
 import unittest
-from game.player import Player
+from snake_ladder.player import Player
 
 class TestPlayer(unittest.TestCase):
     def setUp(self):

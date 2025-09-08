@@ -1,4 +1,4 @@
-from game.config import (ladder_positions_map, snake_positions_map
+from snake_ladder.config import (ladder_positions_map, snake_positions_map
                     , board_size, min_dice_value, max_dice_value)
 class Board:
     

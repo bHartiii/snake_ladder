@@ -1,6 +1,6 @@
-from game.player import Player
-from game.board import Board
-from game.config import board_size
+from snake_ladder.player import Player
+from snake_ladder.board import Board
+from snake_ladder.config import board_size
 
 class SnakeLadderGame:
     def __init__(self):
